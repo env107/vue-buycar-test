@@ -1,0 +1,43 @@
+@slideDuring : .2s;
+/* 左边默认状态 */
+.glist-l-enter{
+  right:100%;
+}
+/* 左边滑出状态 */
+.glist-l-leave-active{
+  animation: slide-left @slideDuring;
+}
+/*从左边滑入的状态*/
+.glist-l-enter-active{
+  animation: slide-right @slideDuring reverse;
+}
+
+/* 右边默认状态 */
+.glist-r-enter{
+    left:100%;
+  }
+  /* 左边滑出状态 */
+  .glist-r-leave-active{
+    animation: slide-right @slideDuring;
+  }
+  /*从左边滑入的状态*/
+  .glist-r-enter-active{
+    animation: slide-left @slideDuring reverse;
+  }
+
+@keyframes slide-left {
+  from{
+    left:0;
+  }
+  to{
+    left:-100%;
+  }
+}
+@keyframes slide-right {
+  from{
+    left:0;
+  }
+  to{
+    left:100%;
+  }
+}

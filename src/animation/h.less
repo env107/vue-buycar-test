@@ -1,0 +1,32 @@
+@slideDuring : .1s;
+/* 左边默认状态 */
+.glist-l-enter{
+  right:100%;
+}
+/* 左边滑出状态 */
+.glist-l-leave-active{
+  animation: slide-left @slideDuring;
+  animation-timing-function: ease-out;
+}
+/*从左边滑入的状态*/
+.glist-l-enter-active{
+  animation: slide-right @slideDuring reverse;
+  animation-timing-function: ease;
+}
+
+@keyframes slide-left {
+  from{
+    left:0;
+  }
+  to{
+    left:-100%;
+  }
+}
+@keyframes slide-right {
+  from{
+    right:0;
+  }
+  to{
+    right:100%;
+  }
+}
